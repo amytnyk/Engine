@@ -1,3 +1,4 @@
+#pragma once
 #include "Line.hpp"
 
 MLine::MLine(int firstX, int firstY, int lastX, int lastY, COLORREF color)

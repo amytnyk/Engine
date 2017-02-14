@@ -1,3 +1,4 @@
+#pragma once
 #include "Rectangle.hpp"
 
 MRectangle::MRectangle(int x, int y, double sizeX, double sizeY, COLORREF border_color, COLORREF fill_color)

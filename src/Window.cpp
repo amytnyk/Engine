@@ -1,4 +1,8 @@
 #include "Window.hpp"
+#include <string>
+#include "System.hpp"
+
+using namespace System;
 
 void Window::SetHwnd(HWND hwnd)
 {
@@ -20,6 +24,33 @@ void Window::Draw(MRectangle rect)
   SelectObject(hDC, hOldBrush);
   DeleteObject(hBrush);
   ReleaseDC(this->hwnd, hDC);
+}
+
+void Window::Draw(MSprite sprite)
+{
+  for (size_t i = 0; i < sprite.Events.size();)
+  {
+    if (sprite.Events[i] == "DrawLine")
+    {
+      Window::Draw(MLine(std::stoi(sprite.Events[i + 1]), std::stoi(sprite.Events[i + 2]), std::stoi(sprite.Events[i + 3]), std::stoi(sprite.Events[i + 4]), ConvertStringToColor(sprite.Events[i + 5])));
+      i += 6;
+    }
+    if (sprite.Events[i] == "DrawCircle")
+    {
+      Window::Draw(MCircle(std::stoi(sprite.Events[i + 1]), std::stoi(sprite.Events[i + 2]), std::stoi(sprite.Events[i + 3]), ConvertStringToColor(sprite.Events[i + 4]), ConvertStringToColor(sprite.Events[i + 5])));
+      i += 6;
+    }
+    if (sprite.Events[i] == "DrawRectangle")
+    {
+      Window::Draw(MRectangle(std::stoi(sprite.Events[i + 1]), std::stoi(sprite.Events[i + 2]), std::stoi(sprite.Events[i + 3]), std::stoi(sprite.Events[i + 4]), ConvertStringToColor(sprite.Events[i + 5]), ConvertStringToColor(sprite.Events[i + 6])));
+      i += 7;
+    }
+    if (sprite.Events[i] == "DrawEllipse")
+    {
+      Window::Draw(MEllipse(std::stoi(sprite.Events[i + 1]), std::stoi(sprite.Events[i + 2]), std::stoi(sprite.Events[i + 3]), std::stoi(sprite.Events[i + 4]), ConvertStringToColor(sprite.Events[i + 5]), ConvertStringToColor(sprite.Events[i + 6])));
+      i += 7;
+    }
+  }
 }
 
 void Window::Draw(MCircle circle)
@@ -66,7 +97,6 @@ void Window::Draw(MLine line)
   GetCurrentPositionEx(hDC, &p);
   MoveToEx(hDC, line.FirstX, line.FirstY, &p);
   LineTo(hDC, line.LastX, line.LastY);
-
   SelectObject(hDC, hOldPen);
   DeleteObject(hPen);
   ReleaseDC(this->hwnd, hDC);

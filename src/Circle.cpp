@@ -2,7 +2,7 @@
 #include "Circle.hpp"
 #include <Windows.h>
 
-MCircle::MCircle(int x, int y, double radius, COLORREF border_color, COLORREF fill_color)
+MCircle::MCircle(int x, int y, int radius, COLORREF border_color, COLORREF fill_color)
 {
   this->X = x;
   this->Y = y;
