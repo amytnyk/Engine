@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <string>
 #include "Coord.hpp"
+#include "System.hpp"
 
 namespace System 
 {
