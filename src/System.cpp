@@ -10,15 +10,6 @@ namespace System
     return RGB(r, g, b);
   }
 
-  Coord GetCursorPosition()
-  {
-    POINT p;
-    GetCursorPos(&p);
-    Coord coord(0, 0);
-    coord.PointTo(p);
-    return coord;
-  }
-
   COLORREF ConvertStringToColor(std::string c)
   {
     if (c == "red")

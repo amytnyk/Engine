@@ -9,6 +9,11 @@ void Window::SetHwnd(HWND hwnd)
   this->hwnd = hwnd;
 }
 
+void Window::Clear()
+{
+  system("cls");
+}
+
 void Window::Draw(MRectangle rect)
 {
   HDC hDC = GetDC(this->hwnd);

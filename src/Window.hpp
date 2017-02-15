@@ -14,6 +14,7 @@ public:
   __declspec(dllexport)void Draw(MCircle);
   __declspec(dllexport)void Draw(MEllipse);
   __declspec(dllexport)void Draw(MSprite);
+  __declspec(dllexport)void Clear();
   __declspec(dllexport)void SetHwnd(HWND);
 private:
   HWND hwnd;
