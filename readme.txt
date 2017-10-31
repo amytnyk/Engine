@@ -1,5 +1,7 @@
 Thanks for downloading :)
 last update - 15.02.2017
+My youtube channel -
+	https://www.youtube.com/channel/UCVVhRbszAwika9jhokNCQzg
 Email -
              alex.mytnyk@ukr.net
              alex.mytnykg@gmail.com
@@ -17,4 +19,4 @@ Other Projects
 	===   New Year Site
 	===   CSS 3d animation
 	===   MytnykLibrary
-Rate me please -------- mytnyk.freedomain.thehost.com.ua/rate.html
+Rate me please -------- domatur.com/rate.html
