@@ -4,8 +4,7 @@ Email -
              alex.mytnyk@ukr.net
              alex.mytnykg@gmail.com
 site - 
-         mytnyk.freedomain.thehost.com.ua
-         oldsite.mytnyk.freedomain.thehost.com.ua
+	domatur.com
 Country - 
          Ukraine
 City - 
